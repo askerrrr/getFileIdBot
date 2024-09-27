@@ -11,5 +11,6 @@
   "description": "",
   "dependencies": {
     "grammy": "^1.30.0"
-  }
+  },
+  "type": "module"
 }

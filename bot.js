@@ -1,7 +1,7 @@
-const { env } = require("./env");
-const { Bot } = require("grammy");
-const { getFileUrl } = require("./getFileUrl");
-const { errorHandler } = require("./errorHandler");
+import env from "./env.js";
+import { Bot } from "grammy";
+import getFileUrl from "./getFileUrl.js";
+import errorHandler from "./errorHandler.js";
 
 const bot = new Bot(env.token);
 

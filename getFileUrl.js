@@ -1,4 +1,4 @@
-const { env } = require("./env");
+import env from "./env.js";
 
 async function getFileUrl(ctx, file) {
   try {
@@ -11,4 +11,4 @@ async function getFileUrl(ctx, file) {
   }
 }
 
-module.exports = { getFileUrl };
+export default getFileUrl;
