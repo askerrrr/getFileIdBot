@@ -2,8 +2,15 @@ import env from "./env.js";
 import { Bot } from "grammy";
 import getFileUrl from "./getFileUrl.js";
 import errorHandler from "./errorHandler.js";
+import checkUrl from "./checkUrl.js";
 
 const bot = new Bot(env.token);
+
+bot.on("message", async (ctx) => {
+  const url = ctx.message.text;
+
+  await checkUrl(url, ctx);
+});
 
 bot.on("message:photo", async (ctx) => {
   const photos = ctx.message.photo;
